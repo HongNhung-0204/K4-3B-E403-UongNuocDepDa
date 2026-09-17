@@ -6,12 +6,12 @@
 
 **Lớp:** 3B · **Phòng:** \_**\_ · **Cụm:** \_\_** · **Track:** \_\_\_\_
 
-| Họ và Tên             | Mã Học Viên | Vai trò chính | Phần việc đảm nhiệm trong dự án |
-| --------------------- | ----------- | ------------- | ------------------------------- |
-| Nguyễn Thị Hồng Nhung | 2A202602557 | BA            | Xây dựng khảo sát               |
-| Vũ Văn Điền           |             |               |                                 |
-|                       |             |               |                                 |
-|                       |             |               |                                 |
+| Họ và Tên             | Mã Học Viên | Vai trò chính | Phần việc đảm nhiệm trong dự án                        |
+| --------------------- | ----------- | ------------- | ------------------------------------------------------ |
+| Nguyễn Thị Hồng Nhung | 2A202602557 | BA            | Xây dựng khảo sát, vẽ workflow cho chức năng tìm đường |
+| Vũ Văn Điền           | 2A202602418 | BE            | Xây dựng hạ tầng cho chatbot                           |
+| Nguyễn Bảo Sơn        | 2A202602402 | FE            | Thiết kế giao diện, vẽ prototype                       |
+|                       |             |               |                                                        |
 
 > Nhóm copy nguyên file README này về repo của mình, rồi điền bảng trên. Cột **Phần việc đảm nhiệm** ghi càng cụ thể càng tốt.
 
