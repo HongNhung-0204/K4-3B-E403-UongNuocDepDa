@@ -1,0 +1,52 @@
+[
+  {
+    "id": "library-hours",
+    "title": "Thư viện Trung tâm: vị trí và giờ mở cửa",
+    "content": "Trong bản đồ demo, Thư viện Trung tâm được gắn tại Building C. Bộ dữ liệu hiện chưa có giờ mở cửa hoặc giờ đóng cửa được VinUni xác minh. Hãy kiểm tra với bộ phận thư viện trước khi đến.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Thư viện",
+    "keywords": ["thư viện mở đến mấy giờ", "giờ mở cửa thư viện", "thư viện", "library", "building c"],
+    "locationId": "library-c",
+    "verified": false
+  },
+  {
+    "id": "cecs-lab",
+    "title": "CECS Lab trên bản đồ demo",
+    "content": "Bản đồ demo gắn CECS Lab với Building B. Vị trí phòng cụ thể và quyền sử dụng phòng lab chưa được xác minh; hãy hỏi đơn vị quản lý trước khi đến.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Phòng lab",
+    "keywords": ["cecs lab", "phòng lab", "lab cecs", "building b"],
+    "locationId": "building-b",
+    "verified": false
+  },
+  {
+    "id": "dormitory",
+    "title": "Ký túc xá trên bản đồ demo",
+    "content": "Bản đồ demo gắn khu ký túc xá với Building D. Thông tin phòng ở, giờ ra vào và thủ tục đăng ký chưa được xác minh.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Ký túc xá",
+    "keywords": ["ký túc xá", "kí túc xá", "dorm", "building d"],
+    "locationId": "building-d",
+    "verified": false
+  },
+  {
+    "id": "cafeteria",
+    "title": "Nhà ăn trên bản đồ demo",
+    "content": "Bản đồ demo gắn nhà ăn sinh viên với Building A. Giờ phục vụ, thực đơn và giá chưa được xác minh.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Nhà ăn",
+    "keywords": ["nhà ăn", "căng tin", "canteen", "cafeteria", "building a"],
+    "locationId": "building-a",
+    "verified": false
+  },
+  {
+    "id": "central-plaza",
+    "title": "Quảng trường trung tâm",
+    "content": "Trong bản đồ demo, Quảng trường trung tâm là điểm bắt đầu mặc định của các tuyến đi bộ mô phỏng. Đây không phải vị trí GPS thực của người dùng.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Bản đồ campus",
+    "keywords": ["quảng trường trung tâm", "central plaza", "điểm bắt đầu"],
+    "locationId": "central-plaza",
+    "verified": false
+  }
+]

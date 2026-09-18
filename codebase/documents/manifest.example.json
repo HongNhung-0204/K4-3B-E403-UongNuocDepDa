@@ -1,0 +1,9 @@
+{
+  "quy-dinh-thu-vien.pdf": {
+    "title": "Quy định Thư viện",
+    "verified": false,
+    "url": "https://example.org/quy-dinh-thu-vien.pdf",
+    "locationId": "library-c",
+    "keywords": ["mượn sách", "trả sách"]
+  }
+}

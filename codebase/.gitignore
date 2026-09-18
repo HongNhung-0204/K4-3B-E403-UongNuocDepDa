@@ -1,0 +1,18 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+coverage/
+playwright-report/
+test-results/
+*.tsbuildinfo
+_logs/*
+!_logs/eval-trace.json
+_update-notifier-last-checked
+*.local
+# Tài liệu và chỉ mục chứa nguyên văn nội dung; chỉ commit khi được phép công khai.
+documents/*
+!documents/README.md
+!documents/manifest.example.json
+server/generated-knowledge.json

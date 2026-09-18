@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
+  "functions": {
+    "api/chat.ts": { "maxDuration": 15 }
+  },
+  "rewrites": [
+    { "source": "/((?!api/|assets/|maps/|index\\.html$).*)", "destination": "/index.html" }
+  ]
+}

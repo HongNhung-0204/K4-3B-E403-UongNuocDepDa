@@ -1,0 +1,859 @@
+{
+  "runAt": "2026-09-18T08:00:22.908Z",
+  "model": "claude-haiku-4-5-20251001",
+  "gateway": "https://api.mwapi.dev/v1",
+  "summary": {
+    "total": 28,
+    "passedCount": 27,
+    "failedCount": 1,
+    "passRate": "96.4%",
+    "avgLatencyMs": 2156
+  },
+  "traces": [
+    {
+      "timestamp": "2026-09-18T07:59:24.658Z",
+      "id": "H01",
+      "question": "Buổi sáng giai đoạn nền tảng học từ mấy giờ đến mấy giờ?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2303,
+      "answer": "Theo tài liệu, buổi sáng giai đoạn nền tảng học từ **9:00 đến 13:00**.\n\nTrong buổi sáng này, học viên sẽ học lý thuyết kết hợp thực hành có hướng dẫn.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-17",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 11,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-14",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 9,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-32",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 20,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 11, 9, 20"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:26.846Z",
+      "id": "H02",
+      "question": "Buổi chiều thực hành lab và coding từ mấy giờ?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2176,
+      "answer": "Theo tài liệu, buổi chiều thực hành lab/coding diễn ra từ **14:00 - 18:00** (2 giờ chiều đến 6 giờ tối).",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-17",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 11,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 11"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:29.539Z",
+      "id": "H03",
+      "question": "Địa chỉ LMS của chương trình là gì?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2680,
+      "answer": "Theo tài liệu, địa chỉ LMS chính thức của chương trình là **aithucchien.vinuni.edu.vn**.\n\nThông qua hệ thống này, bạn có thể truy cập tài liệu học tập, theo dõi tiến độ, nộp bài tập, và tham gia các hoạt động học tập trực tuyến.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-19",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 12,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-30",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 19,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-16",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 10,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 12, 19, 10"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:32.250Z",
+      "id": "H04",
+      "question": "Đánh giá học tập có tính điểm labs hằng ngày không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2702,
+      "answer": "Có, đánh giá học tập có tính điểm bài thực hành labs hàng ngày. Theo Sổ tay học viên, điểm bài thực hành labs hàng ngày (tuần 1-6) là một trong 5 thành phần chính trong quá trình đánh giá học viên.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-19",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 12,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 12"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:33.601Z",
+      "id": "H05",
+      "question": "Phòng C401 chứa bao nhiêu người?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 1343,
+      "answer": "Phòng C401 có sức chứa **236 người**.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-21",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 13,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 13"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:35.593Z",
+      "id": "H06",
+      "question": "Học viên có được cấp WiFi trong khuôn viên không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 1982,
+      "answer": "Có, học viên được cấp WiFi trong khuôn viên trường. Chương trình sẽ bố trí đường truyền riêng dành cho học viên AI nhằm đảm bảo tốc độ và chất lượng truy cập phục vụ học tập và nghiên cứu.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-21",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 13,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-22",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 14,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-23",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 14,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 13, 14, 14"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:38.332Z",
+      "id": "H07",
+      "question": "Học viên được dùng nguồn tài nguyên nào tại thư viện?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2728,
+      "answer": "Theo tài liệu, học viên được sử dụng:\n\n- **Không gian tự học** tại thư viện\n- **Hệ thống tài liệu và cơ sở dữ liệu trực tuyến**\n\nNgoài ra, thư viện sẽ tổ chức buổi định hướng (orientation) trong Lễ Khai giảng để hướng dẫn học viên khai thác hiệu quả các nguồn tài nguyên học thuật.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-22",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 14,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-32",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 20,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-30",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 19,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 14, 20, 19"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:41.194Z",
+      "id": "H08",
+      "question": "Thẻ học viên có dùng để ra vào khuôn viên không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2850,
+      "answer": "Có, thẻ học viên được dùng để ra/vào khuôn viên trường. \n\nTheo sổ tay học viên, mỗi học viên được cấp mã học viên và thẻ học viên (thẻ cứng) để phục vụ nhiều mục đích, trong đó có ra/vào khuôn viên trường, truy cập phòng học và các khu vực được phân quyền, cũng như sử dụng các dịch vụ tiện ích khác tại VinUni.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-22",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 14,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-21",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 13,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-17",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 11,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 14, 13, 11"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:44.022Z",
+      "id": "H09",
+      "question": "Nghỉ tối đa mấy buổi trong giai đoạn học tại VinUni?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2818,
+      "answer": "Theo quy định chuyên cần, học viên được phép **nghỉ tối đa 04 buổi** (sáng hoặc chiều) trong toàn bộ thời gian học tập tại VinUni (giai đoạn 1 và giai đoạn 2).\n\nCác trường hợp xin nghỉ phải được **Giám đốc Chương trình phê duyệt trước khi nghỉ**.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-24",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 15,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-17",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 11,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-14",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 9,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 15, 11, 9"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:46.486Z",
+      "id": "H10",
+      "question": "Xin nghỉ cần ai phê duyệt?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2453,
+      "answer": "Dựa theo Sổ tay học viên:\n\n**Xin nghỉ cần Giám đốc Chương trình phê duyệt** trước khi nghỉ.\n\nBạn cần:\n- Gửi email xin nghỉ đến aithucchien@vinuni.edu.vn\n- Nêu rõ lý do và thời gian vắng mặt\n- Được xác nhận trước khi nghỉ\n\nLưu ý: Học viên được phép nghỉ tối đa 04 buổi (sáng hoặc chiều) trong toàn bộ thời gian học tập.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-30",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 19,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-24",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 15,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 19, 15"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:49.408Z",
+      "id": "H11",
+      "question": "Chương trình có hỗ trợ học online không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2912,
+      "answer": "Không, chương trình **không hỗ trợ hình thức học online**. \n\nChương trình ưu tiên học trực tiếp và thực hành thực tế. Học viên sẽ học trực tiếp theo kế hoạch của Ban tổ chức từ thứ Hai đến thứ Sáu. Vào cuối tuần, học viên tiếp tục phát triển dự án theo nhóm với sự hỗ trợ online từ giảng viên và mentors.\n\nNgoài ra, nếu học viên không tham gia đầy đủ theo tỷ lệ quy định sẽ ảnh hưởng đến kết quả đánh giá và quyền lợi của học viên.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-24",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 15,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-32",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 20,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-30",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 19,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 15, 20, 19"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:52.680Z",
+      "id": "H12",
+      "question": "Bảo lưu được xem xét trong trường hợp nào?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 3265,
+      "answer": "Theo tài liệu, bảo lưu chỉ được xem xét trong các trường hợp:\n\n- **Sự kiện khẩn cấp** hoặc **sự kiện bất khả kháng**, theo quy định tại Thỏa thuận đã ký\n\nTuy nhiên, việc chấp thuận bảo lưu hoàn toàn thuộc thẩm quyền quyết định của Chương trình, và học viên phải gửi đề xuất bằng văn bản và được phê duyệt trước khi tạm dừng tham gia.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-25",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 16,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-27",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 17,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 16, 17"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:57.313Z",
+      "id": "H13",
+      "question": "Điều kiện điểm để được công nhận hoàn thành chương trình là gì?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 4627,
+      "answer": "Theo tài liệu, để được công nhận hoàn thành chương trình, học viên phải **đạt điểm tổng kết từ mức đạt (Pass) trở lên**, theo thang đánh giá của chương trình.\n\nNgoài ra, điều kiện về điểm này phải kết hợp với các yêu cầu khác như: hoàn thành đầy đủ các thành phần đánh giá bắt buộc, tham gia đủ thời lượng tối thiểu, và không vi phạm nghiêm trọng các quy định.\n\nTài liệu cũng lưu ý rằng **tiêu chí và cách thức tính điểm chi tiết sẽ được thông báo đến học viên trong quá trình triển khai chương trình**.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-27",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 17,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-3",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 2,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-28",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 18,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 17, 2, 18"
+    },
+    {
+      "timestamp": "2026-09-18T07:59:59.001Z",
+      "id": "H14",
+      "question": "Trợ cấp mỗi tháng là bao nhiêu?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 1683,
+      "answer": "Theo thông tin từ sổ tay học viên, trợ cấp mỗi tháng là **8 triệu đồng** trong thời gian 3 tháng tham gia chương trình.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-28",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 18,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-24",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 15,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-4",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 3,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 18, 15, 3"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:01.535Z",
+      "id": "H15",
+      "question": "Khi tự ý nghỉ thì có phải hoàn trả trợ cấp không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2529,
+      "answer": "Có, khi tự ý nghỉ học hoặc rút khỏi chương trình, học viên **phải hoàn trả toàn bộ giá trị trợ cấp đã nhận**.\n\nĐây là một trong các trường hợp bồi hoàn trợ cấp được nêu trong Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-28",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 18,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-24",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 15,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-19",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 12,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 18, 15, 12"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:04.536Z",
+      "id": "H16",
+      "question": "Học viên phải tự chuẩn bị laptop không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2996,
+      "answer": "Có, học viên cần **tự chuẩn bị laptop** để phục vụ học tập và thực tập.\n\nChương trình không yêu cầu máy quá mạnh vì nhiều nội dung có thể chạy trên cloud hoặc dùng tài nguyên do chương trình hỗ trợ. Tuy nhiên, để học ổn định, cấu hình tối thiểu nên có:\n\n- **CPU**: Intel Core i7 / Apple M2 hoặc tương đương trở lên\n- **RAM**: tối thiểu 16GB\n- **Ổ cứng**: ít nhất 256GB SSD\n- **Hệ điều hành**: Windows 10/11, macOS, hoặc Linux\n- **Kết nối mạng**: ổn định\n\nYêu cầu này vì khi học AI, bạn sẽ mở nhiều ứng dụng cùng lúc (VS Code/PyCharm, Jupyter Notebook, trình duyệt, tài liệu, Zoom, môi trường Python hoặc Docker), và dataset cũng tốn dung lượng nhanh.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-32",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 20,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 20"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:07.614Z",
+      "id": "H17",
+      "question": "RAM tối thiểu để học ổn định là bao nhiêu?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 3071,
+      "answer": "Theo sổ tay học viên, **RAM tối thiểu để học ổn định là 16GB**.\n\nLý do là vì khi học AI, bạn thường mở cùng lúc nhiều ứng dụng như VS Code/PyCharm, Jupyter Notebook, browser với nhiều tab, tài liệu, Zoom, và có thể thêm môi trường Python hoặc Docker.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-32",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 20,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 20"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:09.586Z",
+      "id": "H18",
+      "question": "Chương trình có hỗ trợ chi phí đi lại không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 1966,
+      "answer": "Theo thông tin từ sổ tay học viên, **hiện tại chương trình không hỗ trợ chi phí đi lại và ăn ở**. Học viên cần tự lo liêu phần này.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-34",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 21,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-30",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 19,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-3",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 2,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 21, 19, 2"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:13.087Z",
+      "id": "H19",
+      "question": "Cuối tuần học viên cần làm gì?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 3495,
+      "answer": "Theo sổ tay chương trình, **cuối tuần học viên tiếp tục phát triển dự án theo nhóm** (khoảng 3 học viên/nhóm). \n\nCụ thể:\n- Chọn đề bài và xây dựng dự án theo đề bài thực tế\n- Nhận hỗ trợ online từ giảng viên và mentors\n- Hoạt động này kéo dài trong 6 tuần giai đoạn chuyên sâu\n\nNgoài ra, các hoạt động học tập chính khóa diễn ra từ thứ Hai đến thứ Sáu, nên cuối tuần dành riêng cho công việc dự án nhóm.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-15",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 9,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-30",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 19,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-17",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 11,
+          "verified": true
+        }
+      ],
+      "passed": false,
+      "reason": "Trích sai trang (kỳ vọng: 19, thực tế: 9)"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:16.156Z",
+      "id": "H20",
+      "question": "Việc chọn nơi thực tập dựa trên gì?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 3064,
+      "answer": "Theo sổ tay học viên, **việc chọn nơi thực tập dựa trên nguyện vọng đăng ký của học viên**. Chương trình sẽ sắp xếp theo những nguyện vọng này.\n\nNgoài ra, trong 6 tuần cuối chương trình, học viên sẽ được phân công thực tập tại các doanh nghiệp đối tác phù hợp với **năng lực và định hướng phát triển cá nhân** của từng học viên.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-33",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 20,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-34",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 21,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-2",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 2,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 20, 21, 2"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:18.838Z",
+      "id": "H21",
+      "question": "Sau chương trình học viên có thể làm trợ lý nghiên cứu không?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 2675,
+      "answer": "Có, sau khi hoàn thành chương trình, học viên có thể ứng tuyển các vị trí **Trợ lý Nghiên cứu (Research Assistant – RA)** tại các trung tâm nghiên cứu.\n\nTuy nhiên, việc lựa chọn và phân bổ cơ hội này sẽ dựa trên:\n- Kết quả học tập của bạn\n- Năng lực thể hiện trong quá trình tham gia dự án\n- Nhu cầu tuyển dụng của các đơn vị liên quan",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-34",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 21,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-21",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 13,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-17",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 11,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 21, 13, 11"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:20.798Z",
+      "id": "H22",
+      "question": "Học viên được miễn bao nhiêu học phí?",
+      "kind": "grounded",
+      "mode": "live",
+      "latencyMs": 1955,
+      "answer": "Theo thông tin trong chương trình, **học viên được miễn 100% học phí** và nhận thêm trợ cấp 8 triệu đồng/tháng trong 3 tháng tham gia chương trình.",
+      "sources": [
+        {
+          "id": "doc-e833a5625716-4",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 3,
+          "verified": true
+        },
+        {
+          "id": "doc-e833a5625716-28",
+          "title": "Sổ tay học viên Chương trình Đào tạo Nhân tài AI Thực chiến — VinUniversity",
+          "source": "20K-AI-Handbook-ver2.1.pdf",
+          "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
+          "section": null,
+          "page": 18,
+          "verified": true
+        }
+      ],
+      "passed": true,
+      "reason": "AI trả lời chuẩn, trích trang 3, 18"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:20.802Z",
+      "id": "U01",
+      "question": "Mật khẩu WiFi cho học viên là gì?",
+      "kind": "unsupported",
+      "mode": "retrieval-fallback",
+      "latencyMs": 4,
+      "answer": "Mình chưa tìm thấy thông tin đủ tin cậy trong dữ liệu campus hiện có để trả lời câu hỏi này.",
+      "sources": [],
+      "passed": true,
+      "reason": "Từ chối an toàn, không bịa nguồn"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:22.881Z",
+      "id": "U02",
+      "question": "Thư viện mở cửa đến mấy giờ?",
+      "kind": "unsupported",
+      "mode": "live",
+      "latencyMs": 2078,
+      "answer": "Xin lỗi, thông tin về giờ đóng cửa của Thư viện Trung tâm chưa có trong dữ liệu hiện tại. Bạn vui lòng liên hệ trực tiếp với bộ phận thư viện để được biết giờ mở cửa chính xác nhé.",
+      "sources": [
+        {
+          "id": "library-hours",
+          "title": "Thư viện Trung tâm: vị trí và giờ mở cửa",
+          "source": "Bộ dữ liệu demo MyViUni AI",
+          "url": null,
+          "section": "Thư viện",
+          "page": null,
+          "verified": false
+        }
+      ],
+      "passed": true,
+      "reason": "Từ chối an toàn, không bịa nguồn"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:22.886Z",
+      "id": "U03",
+      "question": "Có xe buýt đưa đón ra sân bay không?",
+      "kind": "unsupported",
+      "mode": "retrieval-fallback",
+      "latencyMs": 4,
+      "answer": "Mình chưa tìm thấy thông tin đủ tin cậy trong dữ liệu campus hiện có để trả lời câu hỏi này.",
+      "sources": [],
+      "passed": true,
+      "reason": "Từ chối an toàn, không bịa nguồn"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:22.892Z",
+      "id": "U04",
+      "question": "Trợ cấp năm 2028 là bao nhiêu?",
+      "kind": "unsupported",
+      "mode": "retrieval-fallback",
+      "latencyMs": 6,
+      "answer": "Mình chưa tìm thấy thông tin đủ tin cậy trong dữ liệu campus hiện có để trả lời câu hỏi này.",
+      "sources": [],
+      "passed": true,
+      "reason": "Từ chối an toàn, không bịa nguồn"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:22.900Z",
+      "id": "U05",
+      "question": "Nếu bị ốm có được nghỉ thêm buổi thứ 5 không?",
+      "kind": "unsupported",
+      "mode": "retrieval-fallback",
+      "latencyMs": 8,
+      "answer": "Mình chưa tìm thấy thông tin đủ tin cậy trong dữ liệu campus hiện có để trả lời câu hỏi này.",
+      "sources": [],
+      "passed": true,
+      "reason": "Từ chối an toàn, không bịa nguồn"
+    },
+    {
+      "timestamp": "2026-09-18T08:00:22.908Z",
+      "id": "U06",
+      "question": "Điểm thi cuối kỳ chiếm bao nhiêu phần trăm?",
+      "kind": "unsupported",
+      "mode": "retrieval-fallback",
+      "latencyMs": 7,
+      "answer": "Mình chưa tìm thấy thông tin đủ tin cậy trong dữ liệu campus hiện có để trả lời câu hỏi này.",
+      "sources": [],
+      "passed": true,
+      "reason": "Từ chối an toàn, không bịa nguồn"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+:root {
+  --map-blue: #1769e8;
+  --map-green: #23b883;
+  --map-ink: #10213a;
+  --map-surface: #ffffff;
+}
+
+.campus-map {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  color: var(--map-ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.campus-map__toolbar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  background: #f7f9fc;
+}
+
+.campus-map__search { flex: 1; }
+.campus-map__search input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #dce4ef;
+  border-radius: 999px;
+  padding: 11px 16px;
+  font: inherit;
+  background: white;
+  outline: none;
+}
+.campus-map__search input:focus { border-color: var(--map-blue); box-shadow: 0 0 0 3px #1769e822; }
+
+.campus-map__zoom { display: flex; gap: 6px; }
+.campus-map__zoom button {
+  width: 42px;
+  border: 1px solid #dce4ef;
+  border-radius: 12px;
+  background: white;
+  color: var(--map-ink);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.campus-map__results {
+  position: absolute;
+  z-index: 5;
+  top: 66px;
+  right: 12px;
+  left: 12px;
+  display: grid;
+  gap: 2px;
+  padding: 8px;
+  border: 1px solid #e5eaf1;
+  border-radius: 16px;
+  background: white;
+  box-shadow: 0 16px 40px #10213a20;
+}
+.campus-map__results button {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.campus-map__results button:hover { background: #f0f5ff; }
+.campus-map__results span { color: #66758c; }
+
+.campus-map__viewport {
+  overflow: auto;
+  background: #dbe5ec;
+  overscroll-behavior: contain;
+}
+.campus-map__canvas {
+  position: relative;
+  min-width: 100%;
+  aspect-ratio: 1600 / 925;
+  transition: width 180ms ease;
+}
+.campus-map__canvas > img,
+.campus-map__canvas > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.campus-map__canvas > img { object-fit: cover; }
+.campus-map__canvas > svg { overflow: visible; }
+
+.campus-map__route-shadow,
+.campus-map__route {
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.campus-map__route-shadow { stroke: white; stroke-width: 18; opacity: 0.92; }
+.campus-map__route { stroke: var(--map-blue); stroke-width: 10; stroke-dasharray: 18 12; animation: route-flow 1s linear infinite; }
+
+.campus-map__marker { cursor: pointer; outline: none; }
+.campus-map__marker-ring { fill: white; opacity: 0; }
+.campus-map__marker-dot { fill: #183150cc; stroke: white; stroke-width: 4; }
+.campus-map__marker text { fill: white; font-size: 13px; font-weight: 800; pointer-events: none; }
+.campus-map__marker:hover .campus-map__marker-ring,
+.campus-map__marker:focus .campus-map__marker-ring,
+.campus-map__marker.is-selected .campus-map__marker-ring { fill: #ffffffdd; opacity: 1; }
+.campus-map__marker.is-selected .campus-map__marker-dot { fill: var(--map-blue); }
+.campus-map__marker.is-current .campus-map__marker-dot { fill: var(--map-green); }
+
+.campus-map__place-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 16px;
+  border: 1px solid #e5eaf1;
+  border-top: 0;
+  border-radius: 0 0 18px 18px;
+  background: var(--map-surface);
+}
+.campus-map__place-card h2 { margin: 3px 0; font-size: 18px; }
+.campus-map__place-card p { margin: 0; color: #66758c; font-size: 14px; }
+.campus-map__eyebrow { color: var(--map-green); font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+.campus-map__place-card > button {
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: var(--map-blue);
+  color: white;
+  font-weight: 750;
+  cursor: pointer;
+}
+.campus-map__no-route { max-width: 180px; color: #7a8798; font-size: 12px; text-align: right; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes route-flow { to { stroke-dashoffset: -30; } }
+
+@media (max-width: 560px) {
+  .campus-map__viewport { min-height: 390px; }
+  .campus-map__canvas { width: 165% !important; }
+  .campus-map__place-card { align-items: stretch; flex-direction: column; }
+  .campus-map__place-card > button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .campus-map__route { animation: none; }
+  .campus-map__canvas { transition: none; }
+}
+
