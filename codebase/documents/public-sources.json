@@ -5,5 +5,12 @@
     "url": "https://vinuni.edu.vn/aithucchien/wp-content/uploads/2026/06/20K-AI-Handbook-ver2.1.pdf",
     "sha256": "3ab00277b0b3c5ac407df4902f3337c830e20d330e763946740bb2c1c31cd3b9",
     "keywords": ["sổ tay học viên", "AI thực chiến", "AI20K"]
+  },
+  "tien-ich-hoc-vien-ai.pdf": {
+    "title": "Những tiện ích dành cho học viên AI tại VinUni",
+    "verified": true,
+    "url": "https://drive.usercontent.google.com/download?id=11C4yrq2vGUH_eVhtqKz_XRUWi6At-Rih&export=download",
+    "sha256": "92d30422385dd908d670f90e0217403294fbd80103b26c8a78b505d6f08984d0",
+    "keywords": ["tiện ích", "thư viện 24/7", "phòng y tế", "JC101", "khu H2", "học viên AI"]
   }
 }
