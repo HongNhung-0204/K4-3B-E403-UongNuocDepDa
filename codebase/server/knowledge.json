@@ -2,50 +2,160 @@
   {
     "id": "library-hours",
     "title": "Thư viện Trung tâm: vị trí và giờ mở cửa",
-    "content": "Trong bản đồ demo, Thư viện Trung tâm được gắn tại Building C. Bộ dữ liệu hiện chưa có giờ mở cửa hoặc giờ đóng cửa được VinUni xác minh. Hãy kiểm tra với bộ phận thư viện trước khi đến.",
+    "content": "Trong bản đồ campus, Thư viện Trung tâm được đặt tại Building C. Bộ dữ liệu hiện chưa có giờ mở cửa hoặc giờ đóng cửa được VinUni xác minh chính thức. Khu vực Library 24/7 chỉ dành cho sinh viên chính quy. Hãy kiểm tra với bộ phận thư viện trước khi đến.",
     "source": "Bộ dữ liệu demo MyViUni AI",
     "section": "Thư viện",
-    "keywords": ["thư viện mở đến mấy giờ", "giờ mở cửa thư viện", "thư viện", "library", "building c"],
+    "keywords": [
+      "thư viện mở đến mấy giờ",
+      "giờ mở cửa thư viện",
+      "thư viện",
+      "library",
+      "building c",
+      "tòa c",
+      "tìm đường đến thư viện",
+      "chỉ đường đến thư viện",
+      "đường đến thư viện",
+      "đi đến thư viện như thế nào",
+      "vị trí thư viện"
+    ],
     "locationId": "library-c",
     "verified": false
   },
   {
     "id": "cecs-lab",
     "title": "CECS Lab trên bản đồ demo",
-    "content": "Bản đồ demo gắn CECS Lab với Building B. Vị trí phòng cụ thể và quyền sử dụng phòng lab chưa được xác minh; hãy hỏi đơn vị quản lý trước khi đến.",
+    "content": "Bản đồ demo gắn CECS Lab với Building B. Vị trí phòng cụ thể và quyền sử dụng phòng lab cần liên hệ đơn vị quản lý trước khi đến.",
     "source": "Bộ dữ liệu demo MyViUni AI",
     "section": "Phòng lab",
-    "keywords": ["cecs lab", "phòng lab", "lab cecs", "building b"],
+    "keywords": [
+      "cecs lab",
+      "phòng lab",
+      "lab cecs",
+      "building b",
+      "tòa b",
+      "tìm đường đến cecs lab",
+      "tìm đường đến tòa b",
+      "chỉ đường đến tòa b",
+      "đường đến phòng lab"
+    ],
     "locationId": "building-b",
     "verified": false
   },
   {
     "id": "dormitory",
     "title": "Ký túc xá trên bản đồ demo",
-    "content": "Bản đồ demo gắn khu ký túc xá với Building D. Thông tin phòng ở, giờ ra vào và thủ tục đăng ký chưa được xác minh.",
+    "content": "Bản đồ demo gắn khu ký túc xá sinh viên với Building D. Để biết thông tin phòng ở, giờ giới nghiêm và đăng ký lưu trú, hãy liên hệ văn phòng quản lý ký túc xá.",
     "source": "Bộ dữ liệu demo MyViUni AI",
     "section": "Ký túc xá",
-    "keywords": ["ký túc xá", "kí túc xá", "dorm", "building d"],
+    "keywords": [
+      "ký túc xá",
+      "kí túc xá",
+      "dorm",
+      "ktx",
+      "building d",
+      "tòa d",
+      "tìm đường đến ký túc xá",
+      "chỉ đường đến ký túc xá",
+      "đường đến ktx",
+      "tìm đường đến tòa d"
+    ],
     "locationId": "building-d",
     "verified": false
   },
   {
     "id": "cafeteria",
     "title": "Nhà ăn trên bản đồ demo",
-    "content": "Bản đồ demo gắn nhà ăn sinh viên với Building A. Giờ phục vụ, thực đơn và giá chưa được xác minh.",
+    "content": "Bản đồ demo gắn khu vực Nhà ăn sinh viên và Căng tin với Building A. Khu vực phục vụ các bữa ăn trong ngày cho cán bộ, giảng viên và học viên.",
     "source": "Bộ dữ liệu demo MyViUni AI",
     "section": "Nhà ăn",
-    "keywords": ["nhà ăn", "căng tin", "canteen", "cafeteria", "building a"],
+    "keywords": [
+      "nhà ăn",
+      "căng tin",
+      "canteen",
+      "cafeteria",
+      "building a",
+      "tòa a",
+      "tìm đường đến nhà ăn",
+      "chỉ đường đến nhà ăn",
+      "đường đến căn tin",
+      "tìm đường đến tòa a"
+    ],
     "locationId": "building-a",
+    "verified": false
+  },
+  {
+    "id": "medical-room",
+    "title": "Phòng Y tế",
+    "content": "Phòng Y tế VinUniversity được bố trí tại Building I. Khi cần hỗ trợ về sức khỏe trong thời gian học tập tại campus, học viên có thể liên hệ trực tiếp phòng y tế tại tòa I.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Y tế",
+    "keywords": [
+      "phòng y tế",
+      "y tế",
+      "trạm y tế",
+      "bác sĩ",
+      "thuốc",
+      "building i",
+      "tòa i",
+      "tìm đường đến phòng y tế",
+      "chỉ đường đến phòng y tế",
+      "đường đến phòng y tế",
+      "tìm đường đến tòa i"
+    ],
+    "locationId": "building-i",
+    "verified": false
+  },
+  {
+    "id": "sports-complex",
+    "title": "Khu thể thao (Building L)",
+    "content": "Khu liên hợp Thể thao và rèn luyện thể chất của trường được đặt tại Building L, bao gồm sân vận động, nhà thi đấu và các phòng tập đa năng.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Thể thao",
+    "keywords": [
+      "khu thể thao",
+      "sân bóng",
+      "nhà thi đấu",
+      "gym",
+      "building l",
+      "tòa l",
+      "tìm đường đến khu thể thao",
+      "chỉ đường đến sân bóng",
+      "tìm đường đến tòa l"
+    ],
+    "locationId": "building-l",
+    "verified": false
+  },
+  {
+    "id": "main-entrance",
+    "title": "Cổng chính VinUniversity",
+    "content": "Cổng chính nằm ở phía tây nam campus, là lối vào và đón tiếp chính của khuôn viên trường kết nối với đại lộ bên ngoài.",
+    "source": "Bộ dữ liệu demo MyViUni AI",
+    "section": "Cổng trường",
+    "keywords": [
+      "cổng chính",
+      "cổng trường",
+      "lối ra",
+      "lối vào",
+      "tìm đường ra cổng chính",
+      "chỉ đường ra cổng",
+      "đường ra cổng chính"
+    ],
+    "locationId": "main-entrance",
     "verified": false
   },
   {
     "id": "central-plaza",
     "title": "Quảng trường trung tâm",
-    "content": "Trong bản đồ demo, Quảng trường trung tâm là điểm bắt đầu mặc định của các tuyến đi bộ mô phỏng. Đây không phải vị trí GPS thực của người dùng.",
+    "content": "Quảng trường trung tâm là điểm giao thoa và là vị trí xuất phát mặc định của tất cả các tuyến chỉ đường trên bản đồ campus.",
     "source": "Bộ dữ liệu demo MyViUni AI",
     "section": "Bản đồ campus",
-    "keywords": ["quảng trường trung tâm", "central plaza", "điểm bắt đầu"],
+    "keywords": [
+      "quảng trường trung tâm",
+      "central plaza",
+      "điểm bắt đầu",
+      "tìm đường đến quảng trường",
+      "quảng trường ở đâu"
+    ],
     "locationId": "central-plaza",
     "verified": false
   }
