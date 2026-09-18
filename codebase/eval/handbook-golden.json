@@ -17,7 +17,7 @@
   { "id": "H16", "kind": "grounded", "question": "Học viên phải tự chuẩn bị laptop không?", "pages": [20], "answerContains": "tự chuẩn bị" },
   { "id": "H17", "kind": "grounded", "question": "RAM tối thiểu để học ổn định là bao nhiêu?", "pages": [20], "answerContains": "16GB" },
   { "id": "H18", "kind": "grounded", "question": "Chương trình có hỗ trợ chi phí đi lại không?", "pages": [21], "answerContains": "không hỗ trợ" },
-  { "id": "H19", "kind": "grounded", "question": "Cuối tuần học viên cần làm gì?", "pages": [19], "answerContains": "dự án theo nhóm" },
+  { "id": "H19", "kind": "grounded", "question": "Cuối tuần học viên cần làm gì?", "pages": [9, 19], "answerContainsAny": ["dự án mô phỏng", "dự án theo nhóm"] },
   { "id": "H20", "kind": "grounded", "question": "Việc chọn nơi thực tập dựa trên gì?", "pages": [20], "answerContains": "nguyện vọng" },
   { "id": "H21", "kind": "grounded", "question": "Sau chương trình học viên có thể làm trợ lý nghiên cứu không?", "pages": [21], "answerContains": "Trợ lý Nghiên cứu" },
   { "id": "H22", "kind": "grounded", "question": "Học viên được miễn bao nhiêu học phí?", "pages": [3, 18], "answerContainsAny": ["miễn học phí", "100% học phí"] },

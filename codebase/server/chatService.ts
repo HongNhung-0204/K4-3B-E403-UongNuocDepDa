@@ -1,4 +1,3 @@
-import { createAnthropic } from '@ai-sdk/anthropic';
 import { generateText } from 'ai';
 import type { ChatResponse, Confidence, Source } from '../src/types/chat';
 import { meaningfulTokens, normalizeVietnamese, retrieve, type KnowledgeChunk, type RetrievalHit } from './retrieval';
@@ -102,6 +101,7 @@ function documentExcerpt(question: string, hits: RetrievalHit[]): string | null 
 }
 
 async function generateWithClaude(question: string, hits: RetrievalHit[], env: Record<string, string | undefined>): Promise<string> {
+  const { createAnthropic } = await import('@ai-sdk/anthropic');
   const provider = createAnthropic({ baseURL: env.ANTHROPIC_BASE_URL, apiKey: env.ANTHROPIC_API_KEY });
   const context = hits.map(({ chunk }, index) => `SOURCE ${index + 1}\nID: ${chunk.id}\nTITLE: ${chunk.title}\nFILE: ${chunk.source}\nSECTION: ${chunk.section ?? 'không có'}\nPAGE: ${chunk.page ?? 'không có'}\nVERIFIED: ${chunk.verified ? 'yes' : 'no'}\nCONTENT: ${chunk.content}`).join('\n\n');
   const result = await generateText({

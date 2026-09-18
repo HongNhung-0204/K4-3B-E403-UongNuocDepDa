@@ -28,7 +28,7 @@ describe('handbook golden set: retrieval, grounded excerpt and provenance', () =
         expect(body.mode).toBe('extractive');
         expect(body.sources[0].page).toBe(top.chunk.page);
         expect(body.sources[0].verified).toBe(true);
-        const acceptable = 'answerContainsAny' in item ? item.answerContainsAny : [item.answerContains!];
+        const acceptable = item.answerContainsAny ?? (item.answerContains ? [item.answerContains] : []);
         expect(acceptable.some((phrase) => normalizeVietnamese(body.answer).includes(normalizeVietnamese(phrase)))).toBe(true);
       } else {
         expect(body.sources.some((source) => source.source === '20K-AI-Handbook-ver2.1.pdf')).toBe(false);

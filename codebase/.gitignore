@@ -15,4 +15,6 @@ _update-notifier-last-checked
 documents/*
 !documents/README.md
 !documents/manifest.example.json
+!documents/public-sources.json
 server/generated-knowledge.json
+dist-server/

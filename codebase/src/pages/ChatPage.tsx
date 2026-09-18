@@ -50,7 +50,7 @@ export default function ChatPage() {
     setStatus('loading');
     setErrorMessage('');
     const controller = new AbortController();
-    const timeout = window.setTimeout(() => controller.abort(), 15_000);
+    const timeout = window.setTimeout(() => controller.abort(), 90_000);
     try {
       const response = await fetch('/api/chat', {
         method: 'POST',

@@ -34,16 +34,47 @@ async function listDocuments(directory, relative = '') {
   return files;
 }
 
-async function readManifest(documentsDir) {
+async function readManifest(documentsDir, name = 'manifest.json') {
   let raw;
-  try { raw = await readFile(path.join(documentsDir, 'manifest.json'), 'utf8'); }
+  try { raw = await readFile(path.join(documentsDir, name), 'utf8'); }
   catch (error) {
     if (error?.code === 'ENOENT') return {};
     throw error;
   }
   const manifest = JSON.parse(raw);
-  if (!manifest || Array.isArray(manifest) || typeof manifest !== 'object') throw new Error('documents/manifest.json phải là một object.');
+  if (!manifest || Array.isArray(manifest) || typeof manifest !== 'object') throw new Error(`documents/${name} phải là một object.`);
   return manifest;
+}
+
+async function readPublicSource(filename, metadata, fetcher) {
+  if (path.basename(filename) !== filename || !SUPPORTED.has(path.extname(filename).toLowerCase())) {
+    throw new Error(`Tên nguồn công khai không hợp lệ: ${filename}`);
+  }
+  if (typeof metadata.url !== 'string' || !metadata.url.startsWith('https://')) {
+    throw new Error(`Nguồn công khai phải có URL HTTPS: ${filename}`);
+  }
+  if (typeof metadata.sha256 !== 'string' || !/^[a-f\d]{64}$/i.test(metadata.sha256)) {
+    throw new Error(`Nguồn công khai phải có SHA-256: ${filename}`);
+  }
+  const response = await fetcher(metadata.url, { signal: AbortSignal.timeout(90_000) });
+  if (!response.ok || !response.body || !response.url.startsWith('https://')) {
+    throw new Error(`Không tải được nguồn công khai ${filename}: HTTP ${response.status}`);
+  }
+  const reader = response.body.getReader();
+  const parts = [];
+  let size = 0;
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      size += value.byteLength;
+      if (size > MAX_FILE_BYTES) throw new Error(`${filename} vượt quá 25 MB.`);
+      parts.push(value);
+    }
+  } finally {
+    reader.releaseLock();
+  }
+  return Buffer.concat(parts.map((part) => Buffer.from(part)), size);
 }
 
 function validateMetadata(metadata, filename) {
@@ -134,18 +165,32 @@ export function chunkText(text) {
   return chunks;
 }
 
-export async function buildIndex({ documentsDir = path.join(ROOT, 'documents'), outputFile = path.join(ROOT, 'server', 'generated-knowledge.json') } = {}) {
+export async function buildIndex({ documentsDir = path.join(ROOT, 'documents'), outputFile = path.join(ROOT, 'server', 'generated-knowledge.json'), fetcher = fetch } = {}) {
   const manifest = await readManifest(documentsDir);
-  const files = await listDocuments(documentsDir);
+  const publicSources = await readManifest(documentsDir, 'public-sources.json');
+  const localFiles = await listDocuments(documentsDir);
+  const files = [...new Set([...localFiles, ...Object.keys(publicSources)])].sort((a, b) => a.localeCompare(b, 'en'));
   if (files.length > MAX_FILES) throw new Error(`Tối đa ${MAX_FILES} tài liệu.`);
   for (const filename of Object.keys(manifest)) {
     if (!files.includes(filename)) throw new Error(`manifest.json tham chiếu file không tồn tại hoặc không được hỗ trợ: ${filename}`);
   }
   const chunks = [];
   for (const filename of files) {
-    const metadata = validateMetadata(manifest[filename] ?? {}, filename);
-    const buffer = await readFile(path.join(documentsDir, filename));
+    const publicMetadata = publicSources[filename];
+    if (publicMetadata !== undefined) {
+      if (!publicMetadata || Array.isArray(publicMetadata) || typeof publicMetadata !== 'object') throw new Error(`Nguồn công khai không hợp lệ: ${filename}`);
+      if (path.basename(filename) !== filename || !SUPPORTED.has(path.extname(filename).toLowerCase())) throw new Error(`Tên nguồn công khai không hợp lệ: ${filename}`);
+      if (typeof publicMetadata.url !== 'string' || !publicMetadata.url.startsWith('https://')) throw new Error(`Nguồn công khai phải có URL HTTPS: ${filename}`);
+      if (typeof publicMetadata.sha256 !== 'string' || !/^[a-f\d]{64}$/i.test(publicMetadata.sha256)) throw new Error(`Nguồn công khai phải có SHA-256: ${filename}`);
+    }
+    const metadata = validateMetadata({ ...publicMetadata, ...manifest[filename] }, filename);
+    const buffer = localFiles.includes(filename)
+      ? await readFile(path.join(documentsDir, filename))
+      : await readPublicSource(filename, publicMetadata, fetcher);
     if (buffer.byteLength > MAX_FILE_BYTES) throw new Error(`${filename} vượt quá 25 MB.`);
+    if (publicMetadata && createHash('sha256').update(buffer).digest('hex').toLowerCase() !== publicMetadata.sha256.toLowerCase()) {
+      throw new Error(`SHA-256 không khớp với nguồn công khai: ${filename}`);
+    }
     const sections = await extractSections(filename, buffer);
     if (sections.every(({ content }) => !content.trim())) throw new Error(`${filename} không có text đọc được. PDF dạng scan cần OCR trước khi nạp.`);
     const title = metadata.title ?? path.basename(filename, path.extname(filename)).replace(/[_-]+/g, ' ');

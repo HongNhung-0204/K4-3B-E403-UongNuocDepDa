@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
@@ -61,6 +62,7 @@ test('indexes Markdown sections and metadata, then removes deleted sources on re
   await buildIndex(options);
   assert.equal(await readFile(options.outputFile, 'utf8'), firstIndex);
   await rm(path.join(options.documentsDir, 'rules.md'));
+  await rm(path.join(options.documentsDir, 'manifest.json'));
   assert.deepEqual(await buildIndex(options), { files: 0, chunks: 0 });
 });
 
@@ -86,4 +88,37 @@ test('rejects metadata for a missing document instead of silently dropping verif
   const options = await fixture(t);
   await writeFile(path.join(options.documentsDir, 'manifest.json'), JSON.stringify({ 'wrong-name.pdf': { verified: true } }));
   await assert.rejects(buildIndex(options), /wrong-name\.pdf/);
+});
+
+test('downloads a pinned public document when the PDF is absent from Git', async (t) => {
+  const options = await fixture(t);
+  const pdf = makePdf('Campus library handbook');
+  const sha256 = createHash('sha256').update(pdf).digest('hex');
+  await writeFile(path.join(options.documentsDir, 'public-sources.json'), JSON.stringify({
+    'handbook.pdf': { title: 'Public handbook', url: 'https://example.org/handbook.pdf', verified: true, sha256 },
+  }));
+  let calls = 0;
+  const fetcher = async (url) => {
+    assert.equal(url, 'https://example.org/handbook.pdf');
+    calls++;
+    const response = new Response(pdf);
+    Object.defineProperty(response, 'url', { value: url });
+    return response;
+  };
+  assert.deepEqual(await buildIndex({ ...options, fetcher }), { files: 1, chunks: 1 });
+  assert.equal(calls, 1);
+  const chunks = JSON.parse(await readFile(options.outputFile, 'utf8'));
+  assert.equal(chunks[0].verified, true);
+  assert.equal(chunks[0].url, 'https://example.org/handbook.pdf');
+  assert.equal(chunks[0].page, 1);
+});
+
+test('rejects a public document whose bytes no longer match the pinned SHA-256', async (t) => {
+  const options = await fixture(t);
+  await writeFile(path.join(options.documentsDir, 'public-sources.json'), JSON.stringify({
+    'handbook.pdf': { url: 'https://example.org/handbook.pdf', sha256: '0'.repeat(64), verified: true },
+  }));
+  const response = new Response(makePdf('Changed contents'));
+  Object.defineProperty(response, 'url', { value: 'https://example.org/handbook.pdf' });
+  await assert.rejects(buildIndex({ ...options, fetcher: async () => response }), /SHA-256 không khớp/);
 });

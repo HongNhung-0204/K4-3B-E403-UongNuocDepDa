@@ -6,8 +6,11 @@ Tài liệu đối chiếu: [README.md](README.md), [đề bài](01-challenge-br
 
 - [x] Tự đọc PDF, DOCX, TXT, Markdown và tạo chỉ mục khi chạy dev/build; kiểm thử đọc PDF theo trang, DOCX và đề mục Markdown.
 - [x] Truy xuất đoạn liên quan, hiển thị file/trang/đề mục/URL nguồn, trích nguyên văn khi AI chưa cấu hình; kiểm tra nội dung tài liệu không vào bundle frontend.
-- [ ] Đưa tài liệu VinUni được phép sử dụng vào `codebase/documents/`; ghi xuất xứ và URL trong `manifest.json`, chỉ đánh dấu `verified: true` sau khi kiểm tra.
-- [ ] Chạy các câu hỏi thực tế trên tài liệu mới, kiểm tra câu trả lời và nguồn; hoàn thiện golden set/eval ở CP3–CP5.
+- [x] Đưa sổ tay VinUniversity được phép sử dụng vào `codebase/documents/`; đã nối đúng tên file và URL nguồn chính thức trong `manifest.json`, giữ `verified: true` theo xác nhận đã kiểm tra của nhóm.
+- [x] Chạy 28 câu hỏi trên sổ tay (22 câu có căn cứ, 6 câu ngoài nguồn); kiểm tra đáp án, trang và URL bằng chế độ trích xuất khi không cấu hình AI. Kết quả 28/28; xem `codebase/eval/local-rag-results.md`.
+- [ ] Sau khi sửa retrieval/prompt, chạy lại golden set với AI thật cho CP4–CP5, lưu output từng case và so với quality bar đã khóa. Báo cáo CP3 lượt 1 là mốc lịch sử riêng.
+- [x] Khai báo sổ tay trong `codebase/documents/public-sources.json`; build từ Git sạch tự tải PDF qua HTTPS, kiểm tra SHA-256 rồi tạo chỉ mục RAG phía server. PDF và `manifest.json` local vẫn bị Git bỏ qua.
+- [ ] Commit/push thay đổi Render, tạo Web Service theo `codebase/README.md`, kiểm tra câu hỏi có nguồn trên URL thật.
 
 ## Ưu tiên xử lý ngay
 
@@ -30,6 +33,8 @@ Tài liệu đối chiếu: [README.md](README.md), [đề bài](01-challenge-br
 - [ ] Có commit đầu trong repo nộp; xác nhận artifact và biên nhận CP2.
 
 ## CP3 — AI thật và lượt đo đầu · 16:00 ngày 18/09
+
+Trạng thái nộp CP3 và push code: **nhóm xác nhận đã hoàn tất**. Các tiêu chí chi tiết bên dưới vẫn cần đối chiếu với artifact và biên nhận khi tổng kết.
 
 - [x] Tạo `codebase/` với prototype end-to-end cho lát cắt đã chốt; có **ít nhất một lời gọi AI thật** ở quyết định trung tâm. Ghi trace/log minh họa, nói rõ phần nào dùng dữ liệu giả hoặc mock; giữ API key trong biến môi trường.
 - [x] Chuẩn bị nguồn căn cứ được phép dùng. Với câu hỏi không có nguồn, nguồn mâu thuẫn, thiếu thông tin hoặc ngoài phạm vi, định nghĩa hành vi hỏi lại/từ chối và bước tiếp theo; không tự bịa câu trả lời.

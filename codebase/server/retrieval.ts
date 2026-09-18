@@ -19,7 +19,7 @@ export type RetrievalHit = { chunk: KnowledgeChunk; score: number };
 export const KNOWLEDGE: KnowledgeChunk[] = [...generatedKnowledge as KnowledgeChunk[], ...knowledgeData];
 
 const STOP_WORDS = new Set(['cho', 'toi', 'minh', 'ban', 'cua', 'la', 'o', 'va', 'co', 'khong', 'duoc', 'den', 'may', 'nhung', 'nhu', 'the', 'nao', 'hoi', 've', 'trong', 'nay', 'mot', 'giup', 'voi', 'tai', 'cac', 'di', 'dau', 'tren', 'gi', 'bao', 'nhieu', 'khi', 'neu', 'bi', 'sao', 'can', 'viec']);
-const REQUIRED_PHRASES = ['mo cua', 'mat khau', 'hoc phi', 'thi cuoi ky'];
+const REQUIRED_PHRASES = ['mo cua', 'mat khau', 'hoc phi', 'thi cuoi ky', 'thoi tiet'];
 const COMMON_DOCUMENT_WORDS = new Set(['chuong', 'trinh', 'hoc', 'vien']);
 
 export function normalizeVietnamese(input: string): string {
@@ -81,6 +81,7 @@ export function retrieve(query: string, chunks: KnowledgeChunk[] = KNOWLEDGE, li
   const normalizedQuery = normalizeVietnamese(query);
   const queryTokens = meaningfulTokens(query);
   if (!normalizedQuery || queryTokens.length === 0) return [];
+  const asksLibraryHours = normalizedQuery.includes('thu vien') && /\b(mo|dong)\b/.test(normalizedQuery) && normalizedQuery.includes('gio');
 
   const documentContents = chunks.filter((chunk) => chunk.origin === 'document')
     .map((chunk) => new Set(normalizeVietnamese(chunk.content).split(' ')));
@@ -97,7 +98,9 @@ export function retrieve(query: string, chunks: KnowledgeChunk[] = KNOWLEDGE, li
       const coverage = matches.reduce((sum, token) => sum + weight(token), 0) / totalWeight;
       const numbersMatched = queryTokens.filter((token) => /^\d+$/.test(token)).every((token) => contentTokens.has(token));
       const phrasesMatched = REQUIRED_PHRASES.every((phrase) => !normalizedQuery.includes(phrase) || content.includes(phrase));
-      const relevant = matches.length >= Math.min(2, queryTokens.length) && coverage > 0.55 && numbersMatched && phrasesMatched;
+      const libraryHoursMatched = !asksLibraryHours || (content.includes('thu vien')
+        && /\b(mo|dong)\b/.test(content) && /\b\d{1,2}(?::|h)\d{2}\b/i.test(chunk.content));
+      const relevant = matches.length >= Math.min(2, queryTokens.length) && coverage > 0.55 && numbersMatched && phrasesMatched && libraryHoursMatched;
       const score = relevant
         ? 20 + coverage * 10 + matches.reduce((sum, token) => sum + 4 * weight(token), 0)
           + proximityScore(queryTokens, content)
