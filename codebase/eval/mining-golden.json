@@ -1,0 +1,142 @@
+[
+  {
+    "id": "M01",
+    "kind": "mined-grounded",
+    "question": "A ơi, cho e hỏi, buổi workshop chủ nhật ngày mai thì có tính vào số buổi nghỉ ko ạ? Giả dụ sáng mai e có việc thì sao ạ?",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M63574",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-12 11:06",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord của học viên."
+    },
+    "error_layer": "② Mơ hồ/thiếu thông tin",
+    "expected_behavior": "Nhận diện câu hỏi về tính chuyên cần nhưng không tự kết luận ngoại lệ; cần nêu điều kiện/phê duyệt hoặc hỏi rõ buổi học và quy định áp dụng."
+  },
+  {
+    "id": "M02",
+    "kind": "mined-grounded",
+    "question": "có điểm danh ws không ạ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M69081",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-12 12:04",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord của học viên."
+    },
+    "error_layer": "① Nguồn sự thật",
+    "expected_behavior": "Trả lời chỉ khi có nguồn chính thức về điểm danh workshop; nếu không có nguồn phù hợp thì nói rõ chưa đủ căn cứ và không đoán."
+  },
+  {
+    "id": "M03",
+    "kind": "mined-grounded",
+    "question": "mới có thông báo lập team trên phoenix nhưng cho em hỏi là lv2 có cần phải lập team không ạ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M01844",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-12 18:07",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord của học viên."
+    },
+    "error_layer": "④ Đặc thù domain",
+    "expected_behavior": "Phân biệt level và quy định lập team; phải dẫn nguồn hoặc hướng người dùng kiểm tra thông báo Phoenix/chương trình, không suy diễn từ quy định của level khác."
+  },
+  {
+    "id": "M04",
+    "kind": "mined-grounded",
+    "question": "dạ em vẫn chưa biết là lv2 có build và sẽ build cái gì có giống như lv3 để lập team cho hợp lý ấy ạ. Hôm nay em nghe mấy anh giảng viên bảo là lv2 chỉ học 3 tuần rồi bắt đầu thực chiến tại doanh nghiệp luôn ấy ạ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M11422",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-12 18:19",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord của học viên."
+    },
+    "error_layer": "② Mơ hồ/thiếu thông tin",
+    "expected_behavior": "Tách các ý hỏi về nội dung build, lập team và lộ trình level; hỏi lại hoặc trả lời từng phần có căn cứ, không gộp thành một kết luận."
+  },
+  {
+    "id": "M05",
+    "kind": "mined-grounded",
+    "question": "Fact : Mình chỉ mới đến VinUni 1-2 lần à nên cũng mù các địa điểm",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M32014",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-13 08:35",
+      "evidence": "Tín hiệu pain nguyên văn về việc chưa quen địa điểm campus, dùng để kiểm tra nhánh bản đồ/tìm đường."
+    },
+    "error_layer": "④ Đặc thù domain",
+    "expected_behavior": "Không tự gán vị trí hoặc tuyến khi người dùng chưa nêu điểm đến; hướng người dùng chọn địa điểm cụ thể trước khi mở bản đồ."
+  },
+  {
+    "id": "M06",
+    "kind": "mined-grounded",
+    "question": "mình điểm danh ws ko ạ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M21623",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-13 11:22",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord của học viên."
+    },
+    "error_layer": "① Nguồn sự thật",
+    "expected_behavior": "Xác định đây là câu hỏi về điểm danh workshop; chỉ trả lời với nguồn được kiểm chứng, nếu thiếu thì từ chối an toàn."
+  },
+  {
+    "id": "M07",
+    "kind": "mined-grounded",
+    "question": "cho e hỏi mai học lab CVAT thì dữ liệu để gán nhãn được bên chương trình cấp hay bọn e tự tìm thế ạ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M74716",
+      "channel": "channel_02",
+      "created_at_vn": "2026-09-13 11:25",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord của học viên."
+    },
+    "error_layer": "④ Đặc thù domain",
+    "expected_behavior": "Trả lời theo đúng buổi lab và nguồn chương trình; không suy đoán nguồn dữ liệu hoặc yêu cầu nộp bài khi chưa có căn cứ."
+  },
+  {
+    "id": "M08",
+    "kind": "mined-grounded",
+    "question": "cho mình hỏi việc mình được điểm danh hay chưa có thể check ở đâu ạ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M13974",
+      "channel": "channel_10",
+      "created_at_vn": "2026-09-12 07:30",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord, có bot reply trong cùng luồng."
+    },
+    "error_layer": "① Nguồn sự thật",
+    "expected_behavior": "Nêu đúng nơi kiểm tra theo cơ chế hiện hành; nếu các kênh có thể thay đổi thì dẫn nguồn/thời điểm và không khẳng định app có lịch sử khi chưa xác minh."
+  },
+  {
+    "id": "M09",
+    "kind": "mined-grounded",
+    "question": "hôm qua ngồi nhầm phòng lab có sao ko",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M94466",
+      "channel": "channel_10",
+      "created_at_vn": "2026-09-12 13:33",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord; luồng reply cho thấy cần làm rõ ngữ cảnh phòng lab."
+    },
+    "error_layer": "② Mơ hồ/thiếu thông tin",
+    "expected_behavior": "Hỏi rõ người dùng đang nói về lớp học, Office Hours hay kênh Discord; không kết luận hậu quả khi chưa biết ngữ cảnh."
+  },
+  {
+    "id": "M10",
+    "kind": "mined-grounded",
+    "question": "các bạn labcoach cho mình hỏi là xem lịch sử điểm danh trên đâu nhỉ",
+    "source": {
+      "dataset": "data/discord-pack/k4_messages.csv",
+      "msg_id": "M58214",
+      "channel": "channel_11",
+      "created_at_vn": "2026-09-12 15:24",
+      "evidence": "Câu hỏi nguyên văn trong tin nhắn Discord; các reply cùng luồng mô tả giới hạn của lịch sử điểm danh."
+    },
+    "error_layer": "③ Ngoài phạm vi/thẩm quyền",
+    "expected_behavior": "Không tự sửa hoặc xác nhận dữ liệu điểm danh; hướng người dùng đến kênh/bộ phận phụ trách và yêu cầu giữ bằng chứng nếu cần khiếu nại."
+  }
+]

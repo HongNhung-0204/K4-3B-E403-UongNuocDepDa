@@ -16,7 +16,7 @@ Tài liệu đối chiếu: [README.md](README.md), [đề bài](01-challenge-br
 
 - [ ] **Chốt lại phạm vi Track E.** `canvas.md` đang nói về tìm đường, thư viện và tiện ích chung của VinUni; Track E chỉ nhận sản phẩm phục vụ **người tham gia khóa AI20k** và bài toán không trùng Track A–D. Chọn một việc cụ thể của học viên/TA trong khóa, có thể gặp người dùng thật và có nguồn dữ liệu kiểm chứng; nếu giữ chủ đề tiện ích thì phải chứng minh nó gắn trực tiếp với khóa.
 - [ ] **Chốt một lát cắt duy nhất** theo mẫu `1 người dùng · 1 việc · 1 quyết định AI · 1 kết quả`; cập nhật `canvas.md` cho khớp lát cắt sẽ build. Chưa mở rộng sang chatbot tổng hợp, tìm đường và tra cứu mọi thứ cùng lúc.
-- [ ] **Xác minh bằng chứng trong canvas.** Tìm log câu hỏi và từng câu trả lời cho số `21/30`, `23/30`; xác nhận người khảo sát ở ngoài nhóm, cách tính tỷ lệ và mức liên quan đến lát cắt cuối. Nếu không có log hoặc pain đổi, khảo sát lại; không dùng số chưa kiểm chứng trong spec/slide.
+- [ ] **Xác minh bằng chứng trong canvas.** Tìm log câu hỏi và từng câu trả lời cho số `20/100`, `11/15`; xác nhận người khảo sát ở ngoài nhóm, cách tính tỷ lệ và mức liên quan đến lát cắt cuối. Nếu không có log hoặc pain đổi, khảo sát lại; không dùng số chưa kiểm chứng trong spec/slide.
 - [ ] **Tách repo nộp công khai khỏi repo tài liệu hiện tại.** Repo này đang chứa nguyên `data/`. Theo README, tạo repo nộp mới, sạch, không fork/clone nguyên lịch sử; chỉ chuyển artifact của nhóm. Không đưa data pack, khóa API, `.env` hay thông tin cá nhân lên repo công khai. Nếu repo hiện tại đã công khai, kiểm tra cả lịch sử commit và báo BTC/coach về dữ liệu đã lộ.
 - [ ] **Xác nhận tình trạng CP1 và CP2 đã nộp hay chưa** bằng form/biên nhận. Không tự đánh dấu hoàn tất chỉ vì đã có `canvas.md` hoặc commit.
 - [ ] **Chốt người nộp và phân công thống nhất.** `README.md` giao Sơn làm FE, Điền làm BE; `canvas.md` lại giao Sơn spec/retrieval và Điền prototype/user test. Ghi một bảng phân công cuối cùng có người chịu trách nhiệm cho evidence, spec, prompt/eval, code, demo. README yêu cầu một đội trưởng dùng cùng mã học viên ở CP1–CP5, nhưng `04-rubric.md` có câu “mỗi thành viên nộp riêng”; hỏi coach/TA để xác nhận cách nộp thực tế.
@@ -41,13 +41,13 @@ Trạng thái nộp CP3 và push code: **nhóm xác nhận đã hoàn tất**. C
 - [x] Tạo `eval/` và golden set **≥20 case**: ≥2 case cho mỗi lớp khó (nguồn sự thật, mơ hồ, ngoài phạm vi, đặc thù domain), 8–10 case thường, 2–4 case hiếm; ≥10 case lấy/phát triển từ data thật trong pack, ghi mã nguồn và chỉ trích ngắn.
 - [x] Định nghĩa 2–3 chiều chất lượng với điều kiện đạt/trượt có thể chấm lại; cho hai người chấm thử cùng 5 output để sửa tiêu chí còn mơ hồ.
 - [x] Chạy toàn bộ golden set lần 1, lưu output của **mọi case** kể cả lỗi, tổng số đạt/tổng số và tỷ lệ %, phân tích lỗi lớn nhất.
-- [ ] Quay video thao tác màn hình khoảng 30 giây cho thấy AI chạy thật; nộp video và số đo CP3, lưu biên nhận.
+- [x] Quay video thao tác màn hình khoảng 30 giây cho thấy AI chạy thật; nộp video và số đo CP3, lưu biên nhận.
 
 ## CP4 — Chốt `spec.md` · 21:00 ngày 18/09
 
-- [ ] Tạo `spec.md` theo `03-ai-spec-template.md`, điền đủ §1–§9 và commit trước hạn.
-- [ ] Hoàn thiện evidence chuẩn A (**≥20 người ngoài nhóm, ≥50% xác nhận, log đủ câu hỏi và từng câu trả lời**) và/hoặc chuẩn B (**số đếm, ≥5 ví dụ nguyên văn, phương pháp đếm kiểm lại được**). Chỉ dẫn mã dữ liệu ngắn; không chép nguyên pack.
-- [ ] Viết problem statement không có chữ AI; bảng impact **≥3 ứng viên** với số người, tần suất, thiệt hại mỗi lần, tính khả thi; giữ lý do loại ứng viên khác và lý do chọn.
+- [x] Tạo `spec.md` theo `03-ai-spec-template.md`, điền đủ §1–§9 và commit trước hạn.
+- [x] Hoàn thiện evidence chuẩn A (**≥20 người ngoài nhóm, ≥50% xác nhận, log đủ câu hỏi và từng câu trả lời**) và/hoặc chuẩn B (**số đếm, ≥5 ví dụ nguyên văn, phương pháp đếm kiểm lại được**). Chỉ dẫn mã dữ liệu ngắn; không chép nguyên pack.
+- [x] Viết problem statement không có chữ AI; bảng impact **≥3 ứng viên** với số người, tần suất, thiệt hại mỗi lần, tính khả thi; giữ lý do loại ứng viên khác và lý do chọn.
 - [ ] Ghi ≥3 non-goals, mức prototype thực tế và lựa chọn augment/conditional/automate dựa trên hậu quả nếu AI sai.
 - [ ] Áp dụng ≥4 nguyên tắc HAX/PAIR, mỗi nguyên tắc trỏ đến đúng vị trí/hành vi trong prototype; trong đó có G10 và cách xử lý khi AI không chắc.
 - [ ] Viết 4 lớp chỗ khó cụ thể và **≥8 kịch bản** có hành vi mong muốn; thể hiện happy path, low-confidence, failure và correction trong spec/prototype.
