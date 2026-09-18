@@ -1,4 +1,4 @@
-## Track E — Siêu ứng dụng MyViuni - 20KAI
+## Track E — Siêu ứng dụng MyVinUni - 20KAI
 
 1. **Track + đề:** E · — Siêu ứng dụng MyVinUni - 20KAI.
 2. **Job executor:** Học viên mới tìm đường khó trong khuôn viên trường và phải mỗi khi muốn tìm hiểu thông tin khóa học hay các tiện ích được sử dụng phải tìm ở nhiều nguồn
