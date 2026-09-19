@@ -29,8 +29,8 @@ Tài liệu đối chiếu: [README.md](README.md), [đề bài](01-challenge-br
 
 ## CP2 — Luồng có thể xem/bấm · 21:00 ngày 17/09
 
-- [ ] Vẽ sơ đồ hoặc mock cho luồng từ nhập câu hỏi → kiểm tra nguồn → trả lời có dẫn nguồn / hỏi lại hoặc báo chưa đủ căn cứ → người dùng sửa câu hỏi.
-- [ ] Có commit đầu trong repo nộp; xác nhận artifact và biên nhận CP2.
+- [x] Vẽ sơ đồ hoặc mock cho luồng từ nhập câu hỏi → kiểm tra nguồn → trả lời có dẫn nguồn / hỏi lại hoặc báo chưa đủ căn cứ → người dùng sửa câu hỏi.
+- [x] Có commit đầu trong repo nộp; xác nhận artifact và biên nhận CP2.
 
 ## CP3 — AI thật và lượt đo đầu · 16:00 ngày 18/09
 
