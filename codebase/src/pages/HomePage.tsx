@@ -6,7 +6,7 @@ export default function HomePage() {
     <main className="page home-page">
       <header className="topbar">
         <div className="brand-mark" aria-hidden="true"><Sparkles size={22} /></div>
-        <div className="topbar__title"><strong>MyViUni <span>AI</span></strong><small>SMART CAMPUS ASSISTANT</small></div>
+        <div className="topbar__title"><strong>VinUni <span>AI</span></strong><small>SMART CAMPUS ASSISTANT</small></div>
         <div className="avatar" aria-label="Tài khoản demo">SV</div>
       </header>
 
@@ -14,8 +14,8 @@ export default function HomePage() {
         <div className="hero-card__glow" aria-hidden="true" />
         <span className="hero-card__eyebrow"><span className="online-dot" /> Trợ lý luôn sẵn sàng</span>
         <h1>Xin chào,<br /><em>bạn cần giúp gì?</em></h1>
-        <p>Khám phá campus và tìm thông tin nhanh hơn cùng MyViUni AI.</p>
-        <Link className="button button--light" to="/chat">Hỏi MyViUni AI <ArrowRight size={18} aria-hidden="true" /></Link>
+        <p>Khám phá campus và tìm thông tin nhanh hơn cùng MyVinUni AI.</p>
+        <Link className="button button--light" to="/chat">Hỏi MyVinUni AI <ArrowRight size={18} aria-hidden="true" /></Link>
         <div className="hero-card__ornament" aria-hidden="true"><Sparkles size={46} /></div>
       </section>
 

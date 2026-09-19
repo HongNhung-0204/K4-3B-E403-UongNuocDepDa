@@ -88,7 +88,7 @@ export default function ChatPage() {
     <main className="page chat-page">
       <header className="chat-header">
         <div className="chat-header__avatar"><Bot size={24} aria-hidden="true" /></div>
-        <div><h1>MyViUni AI</h1><span><i className="online-dot" /> Đang hoạt động</span></div>
+        <div><h1>MyVinUni AI</h1><span><i className="online-dot" /> Đang hoạt động</span></div>
         <span className="chat-header__spark"><Sparkles size={19} aria-hidden="true" /></span>
       </header>
       <div className="chat-content" aria-live="polite">
@@ -97,13 +97,13 @@ export default function ChatPage() {
         {messages.map((message) => message.role === 'user'
           ? <div className="user-message" key={message.id}>{message.content}</div>
           : <article className="answer-card" key={message.id}>
-              <ConfidenceBadge confidence={message.response.confidence} />
-              <p className="answer-card__text">{message.content}</p>
-              {message.response.mode === 'offline-demo' && <span className="answer-card__mode">Demo fallback mode · AI chưa phản hồi</span>}
-              {message.response.mode === 'extractive' && <span className="answer-card__mode">Trích từ tài liệu · AI chưa phản hồi</span>}
-              {message.response.sources.length > 0 && <div className="answer-card__sources"><span className="overline">NGUỒN THAM KHẢO</span>{message.response.sources.map((source) => <SourceCard key={source.id} source={source} />)}</div>}
-              {message.response.locationId && <LocationCard locationId={message.response.locationId} {...locationText(message.response.locationId)} />}
-            </article>)}
+            <ConfidenceBadge confidence={message.response.confidence} />
+            <p className="answer-card__text">{message.content}</p>
+            {message.response.mode === 'offline-demo' && <span className="answer-card__mode">Demo fallback mode · AI chưa phản hồi</span>}
+            {message.response.mode === 'extractive' && <span className="answer-card__mode">Trích từ tài liệu · AI chưa phản hồi</span>}
+            {message.response.sources.length > 0 && <div className="answer-card__sources"><span className="overline">NGUỒN THAM KHẢO</span>{message.response.sources.map((source) => <SourceCard key={source.id} source={source} />)}</div>}
+            {message.response.locationId && <LocationCard locationId={message.response.locationId} {...locationText(message.response.locationId)} />}
+          </article>)}
         {status === 'loading' && <div className="typing-indicator" role="status"><span /><span /><span /><span className="sr-only">Đang trả lời</span></div>}
         {status === 'error' && <div className="chat-error" role="alert">{errorMessage}<button type="button" onClick={() => void requestAnswer(messages)}><RotateCcw size={15} aria-hidden="true" /> Thử lại</button></div>}
         <div ref={bottom} />
